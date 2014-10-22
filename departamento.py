@@ -15,6 +15,10 @@ class Departamento():
         total = 0
         for empleado in self.empleados:
             total = total + empleado.get_salario()
-        print("Salario total: ", total)
         return total
 
+    def get_nombre_dpto(self):
+        return self.nombre_depto
+
+    def get_salario_total_mensual(self):
+        return self.get_salario_total()/12.0
