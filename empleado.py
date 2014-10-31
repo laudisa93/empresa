@@ -1,5 +1,6 @@
 __author__ = 'Laura'
 
+
 class Empleado():
     def __init__(self, nombre, apellidos, dni, direccion, edad, email, salario):
         self.nombre = nombre
@@ -29,7 +30,7 @@ class Empleado():
         return self.direccion
 
     def get_salario_mensual(self):
-        return self.get_salario()/12.0
+        return self.get_salario() / 12.0
 
 
 

@@ -2,7 +2,6 @@ __author__ = 'Laura'
 
 
 class Departamento():
-
     def __init__(self, nombre_depto, id_depto):
         self.nombre_depto = nombre_depto
         self.id_depto = id_depto
@@ -21,4 +20,4 @@ class Departamento():
         return self.nombre_depto
 
     def get_salario_total_mensual(self):
-        return self.get_salario_total()/12.0
+        return self.get_salario_total() / 12.0
