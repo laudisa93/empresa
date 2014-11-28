@@ -10,12 +10,20 @@ __author__ = 'Laura'
 
 
 class TestDepartamento(TestCase):
+    """Clase TestDepartamento para testear los metodos de la clase Departamento del proyecto"""
+
     def test_get_salario_total(self):
-        # emp1 con salario 1000
+        """Metodo test get salario total
+
+        Este metodo testea el correcto funcionamiento del metodo get_salario_total de la clase Departamento
+        creando tres objetos empleados mediante mocks y verificando el valor del salario total
+
+        :return: assertEqual
+        :rtype: bool
+        :raise assertEqual: si los valores de los salarios no coinciden
+        """
         emp1 = mock(Empleado)
-        # emp2 con salario 1500
         emp2 = mock(Empleado)
-        # emp3 con salario 2000
         emp3 = mock(Empleado)
 
         when(emp1).get_salario().thenReturn(1000)
@@ -35,11 +43,18 @@ class TestDepartamento(TestCase):
         self.assertEqual(total, 4500)
 
     def test_get_salario_total_mensual(self):
-        # emp1 con salario 1000
+        """Metodo test para testear el correcto funcionamiento del metodo get_salario_total_mensual
+
+        Este metodo testea el correcto funcionamiento del metodo get_salario_total_mensual de la clase Departamento
+        creando tres objetos empleados mediante mocks y verificando el valor del salario total mensual
+
+        :return: assertEqual
+        :rtype: bool
+        :raise assertEqual: si los valores de los salarios no coinciden
+        """
+
         emp1 = mock(Empleado)
-        # emp2 con salario 1500
         emp2 = mock(Empleado)
-        # emp3 con salario 2000
         emp3 = mock(Empleado)
 
         when(emp1).get_salario().thenReturn(12000)
